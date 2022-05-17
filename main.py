@@ -13,7 +13,6 @@
 #  pay = 40 * float(rate) + (float(hrs) - 40) * float(rate) * 1.5
 #print('You have earned: ', pay)
 
-print (99/100)
 
 try:
     hrs = input('Enter hours: ')
