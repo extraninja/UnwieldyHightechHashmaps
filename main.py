@@ -14,19 +14,25 @@
 #print('You have earned: ', pay)
 
 
+
+
+def computepay(hrs, rate):
+  if hrs <= 40:
+     pay = hrs * rate
+  else:
+     pay = 40 * rate + (hrs - 40) * rate * 1.5
+  return pay
+  
 try:
-    hrs = input('Enter hours: ')
-    hrs = float(hrs)
-    rate = input('Enter pay rate: ')
-    rate = float(rate)
-
-    if hrs <= 40:
-        pay = hrs * rate
-    else:
-        pay = 40 * rate + (hrs - 40) * rate * 1.5
-    y = 'you have earned: $' + str(pay)                             
-    print(y)
-
+  hrs = input('Enter hours: ')
+  rate = input('Enter pay rate: ')
+  hrs = float(hrs)
+  rate = float(rate)
+  
+  pay = computepay(hrs, rate)
+  y = 'According to computepay, you have earned: $'+ str(pay)
+  print(y)
+                                
 except:
-    print('Error, please enter numeric input')
-
+  print('Error, please enter numeric input')
+  
